@@ -1,0 +1,34 @@
+### KodeKloud ####
+
+## LAB1 
+
+1 - docker version 
+
+List all the containers
+2 - docker ps
+
+List all images 
+3 - docker images
+
+To run an image 
+4 - docker run <image_name>
+
+List all containers including non running ones
+5 - docker ps -a
+
+To stop container 
+6 - docker stop <container_id>
+
+To stop all contianers running
+7 - docker kill $(docker ps -q)
+
+$(docker ps -q) -> listing the ids of all containers
+
+8 - To delete all conatiners
+docker rm $(docker ps -a -q)
+
+9 - pull an image without running it
+docker pull nginx:1.14-alpine
+
+10 - Delete all images 
+docker rmi $(docker images -a -q)

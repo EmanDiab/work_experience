@@ -32,3 +32,18 @@ docker pull nginx:1.14-alpine
 
 10 - Delete all images 
 docker rmi $(docker images -a -q)
+
+
+## LAB2 & 3
+
+To get the base of image 
+1 - grep -i FROM /root/webapp-color/Dockerfile
+
+
+run instance from webapp-color with port 8080 on the container to port 8282 on the host
+2 - docker run -p 8282:8080 webapp-color
+
+
+
+build an image 
+3 - sudo docker build /root/webapp-color/ 

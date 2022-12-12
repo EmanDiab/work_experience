@@ -204,3 +204,9 @@ peer: Ijrw1X0tLFcHXOEkzfEwdbB6T8IZycQuRoKaa0dO1kc=
 Congratulations! 
 
 you just finished your first handshake!!   
+
+## For more information check these links
+
+- https://nerdonthestreet.com/s/19
+- https://www.youtube.com/watch?v=88GyLoZbDNw
+- https://www.wireguard.com/quickstart/

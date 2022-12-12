@@ -91,6 +91,7 @@ On Peer B
 Do same steps from 16 to 19 change the ip to 10.0.0.2/24
 
 20 - ip addr
+
   you should see something like this 
   1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
       link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -113,6 +114,7 @@ Do same steps from 16 to 19 change the ip to 10.0.0.2/24
 On Peer A  
 
 21 - ip addr
+
   1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
       link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
       inet 127.0.0.1/8 scope host lo
@@ -136,18 +138,28 @@ On Peer A
 
 22 - wg 
   you should see something like this
+  
 On Peer A 
+
   public key: /Dp5hk6UnvNeU0r3xcG63C9X/q/CN0MZk8J1LQdkOlI=
+  
   private key: (hidden)
+  
   listening port: 58410
 On Peer B
+
   public key: Ijrw1X0tLFcHXOEkzfEwdbB6T8IZycQuRoKaa0dO1kc=
+  
   private key: (hidden)
+  
   listening port: 40820
 
-On Peer A 
+On Peer A
+
   use the public key of PeerB
+  
   you can use database to exchange Public keys
+  
   use global ip and listening port of peer B for the endpoint global-ip:listening-port
 
 23 - wg set wg0 peer Ijrw1X0tLFcHXOEkzfEwdbB6T8IZycQuRoKaa0dO1kc= allowed-ips 10.0.0.2/32 endpoint 10.182.0.5:40820
@@ -161,11 +173,15 @@ On Peer B
 
 On Peer A 
   let's ping Peer B and hope it would work
+  
 25 - ping 10.0.0.2
+
   if you are a lucky man you should see something like this
+  
   64 bytes from 10.0.0.2: icmp_seq=2 ttl=64 time=0.462 ms
 
   Now we know the handshake was successful and the peers are seeing each other inside wireguard tunnel with 
+  
   these ips 10.0.0.2, 10.0.0.1
 
   type the following on each peer to check
@@ -173,6 +189,7 @@ On Peer A
 26 - wg 
 
   you should see something like this
+  
 <!-- interface: wg0
   public key: /Dp5hk6UnvNeU0r3xcG63C9X/q/CN0MZk8J1LQdkOlI=
   private key: (hidden)
@@ -185,4 +202,5 @@ peer: Ijrw1X0tLFcHXOEkzfEwdbB6T8IZycQuRoKaa0dO1kc=
   transfer: 1.59 KiB received, 1.68 KiB sent -->
 
 Congratulations! 
+
 you just finished your first handshake!!   

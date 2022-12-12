@@ -1,4 +1,4 @@
-WireGuard Peer to Peer
+## WireGuard Peer to Peer
 
 1 - Create two instances on the google cloud platform peera & peerb use this link https://cloud.google.com/compute/docs/instances/custom-hostname-vm
 
